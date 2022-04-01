@@ -1,0 +1,16 @@
+/*
+ * Author: http://stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/
+ */
+
+/* Smartphones (portrait and landscape) ----------- */
+@import url('/static/css/smartphones/header.css') (min-device-width : 320px) and (max-device-width : 480px);
+@import url('/static/css/smartphones/members.css') (min-device-width : 320px) and (max-device-width : 480px);
+
+
+
+/* Desktops and laptops ----------- */
+@import url('/static/css/laptops/header.css') (min-width : 1224px);
+@import url('/static/css/laptops/members.css') (min-width : 1224px);
+
+/* Large screens ----------- */
+@import url('/static/css/largescreen/header.css') (min-width : 1824px);
