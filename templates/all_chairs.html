@@ -1,0 +1,29 @@
+{% extends "base.html"%}
+
+{%- block header -%}
+{{ super() }}
+{% endblock %}
+
+{%- block main -%}
+{{super()}}
+
+{% include 'members/general_chairs.html' %}
+{% include 'members/technical_chairs.html' %}
+{% include 'members/publications_chairs.html' %}
+{% include 'members/international_chairs.html' %}
+{% include 'members/publicity_social_media_chairs.html' %}
+{% include 'members/workshop_chairs.html' %}
+{% include 'members/sponsor_and_exhibition_chairs.html' %}
+{% include 'members/panel_chairs.html' %}
+{% include 'members/tutorial_chairs.html' %}
+{% include 'members/demos_chairs.html' %}
+{% include 'members/local_chairs.html' %}
+{% include 'members/award_chairs.html' %}
+{% include 'members/phd_track_chairs.html' %}
+{% include 'members/web_chairs.html' %}
+{% include 'members/program_committee_chairs.html' %}
+
+{% endblock %}
+
+{%- block footer -%}
+{% endblock %}

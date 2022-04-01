@@ -1,0 +1,25 @@
+.text-member-type{
+    font-size: .9rem;
+}
+
+.member-avatar{
+    width: 10rem;
+    margin-left: 25%;
+}
+
+.member-name{
+    font-size: .9rem;
+}
+.member-university
+{
+    font-size: .8rem;
+}
+.member-country
+{
+    font-size: .7rem;
+}
+
+.card img{
+    width: 11rem;
+    height: 10rem;
+}
