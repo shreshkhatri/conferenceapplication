@@ -14,3 +14,7 @@
 
 /* Large screens ----------- */
 @import url('/static/css/largescreen/header.css') (min-width : 1824px);
+
+body{
+    background-color: blue;
+}
