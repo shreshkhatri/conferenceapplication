@@ -125,4 +125,4 @@ def technical_chairs():
     return render_template('typed_chairs.html',title=title,members_type_page=members_type_page)
 
 if __name__=='__main__':
-    app.run()
+    app.run(debug=True)
