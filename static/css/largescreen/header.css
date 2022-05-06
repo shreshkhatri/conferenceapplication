@@ -1,3 +1,10 @@
+.logo a{
+  margin-left:15%;
+}
+
+.logo {
+  margin-top:-35px;
+}
 
 #header{
     color: #0a70a3;
