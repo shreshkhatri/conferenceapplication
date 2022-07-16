@@ -1,8 +1,8 @@
 <div class="container" id="header">
     <div class="row ">
         <div class="banner" style="font-family: 'Vesper Libre', serif;">
-            <p class="h6 m-0">IEEE International Conference On</p>
-            <p class="h4 m-0"> Human-Centered Cognitive Systems (IEEE HCCS 2022) </p>
+            <p class="h6 m-0">International Conference On</p>
+            <p class="h4 m-0"> Human-Centered Cognitive Systems (HCCS 2022) </p>
             <p class="h6 m-0">17-18 December 2022 Shanghai, China</p>
         </div>
     </div>
@@ -17,48 +17,49 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">HOME</a>
+            <a {% if link=="home" %}class="nav-link active" {% else %} class="nav-link" {% endif %} aria-current="page" href="{{ url_for('home') }}">HOME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/aboutus">ABOUT</a>
+            <a {% if link=="about_us" %}class="nav-link active" {% else %} class="nav-link" {% endif %} href="{{ url_for('about_us') }}">ABOUT</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle menu" href="/all-members" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               MEMBERS
             </a>
             <ul class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/all-chairs">All Members</a></li>
-              <li><a class="dropdown-item" href="/general-chairs">Conference Co-General Chairs</a></li>
-              <li><a class="dropdown-item" href="/technical-chairs">Technical Program Chairs</a></li>
-              <li><a class="dropdown-item" href="/publications-chairs">Publication Chairs</a></li>
-              <li><a class="dropdown-item" href="/international-chairs">International Chairs</a></li>
-              <li><a class="dropdown-item" href="/publicity-social-media-chairs">Publicity & Social Media Chairs</a></li>
-              <li><a class="dropdown-item" href="/workshop-chairs">Workshops Chair</a></li>
-              <li><a class="dropdown-item" href="/sponsor-exhibition-chairs">Sponsorship & Exhibition Chairs</a></li>
-              <li><a class="dropdown-item" href="/panel-chairs">Panel Chairs</a></li>
-              <li><a class="dropdown-item" href="/tutorials-chairs">Tutorial Chairs</a></li>
-              <li><a class="dropdown-item" href="/demos-chairs">Demo Chairs</a></li>
-              <li><a class="dropdown-item" href="/local-chairs">Local Chairs</a></li>
-              <li><a class="dropdown-item" href="/award-chairs">Award Chairs</a></li>
-              <li><a class="dropdown-item" href="/phd-track-chairs">PhD Track Chairs</a></li>
-              <li><a class="dropdown-item" href="/web-chairs">Web Chairs</a></li>
-              <li><a class="dropdown-item" href="/program-committee-chairs">program Committee members</a></li>
+              <li><a {% if link=="all_chairs" %}class="dropdown-item active" {% else %} class="dropdown-item" {% endif %} href="{{ url_for('all_chairs') }}">All Members</a></li>
+              <li><a {% if link=="general_chairs" %}class="dropdown-item active" {% else %} class="dropdown-item" {% endif %} href="{{ url_for('general_chairs') }}">Conference Co-General Chairs</a></li>
+              <li><a {% if link=="technical_chairs" %}class="dropdown-item active" {% else %} class="dropdown-item" {% endif %} href="{{ url_for('technical_chairs') }}">Technical Program Chairs</a></li>
+              <li><a {% if link=="publications_chairs" %}class="dropdown-item active" {% else %} class="dropdown-item" {% endif %} href="{{ url_for('publications_chairs') }}">Publication Chairs</a></li>
+              <li><a {% if link=="international_chairs" %}class="dropdown-item active" {% else %} class="dropdown-item" {% endif %} href="{{ url_for('international_chairs') }}">International Chairs</a></li>
+              <li><a {% if link=="publicity_social_media_chairs" %}class="dropdown-item active" {% else %} class="dropdown-item" {% endif %} href="{{ url_for('publicity_social_media_chairs') }}">Publicity & Social Media Chairs</a></li>
+              <li><a {% if link=="workshop_chairs" %}class="dropdown-item active" {% else %} class="dropdown-item" {% endif %} href="{{ url_for('workshop_chairs') }}">Workshops Chair</a></li>
+              <li><a {% if link=="panel_chairs" %}class="dropdown-item active" {% else %} class="dropdown-item" {% endif %} href="{{ url_for('panel_chairs') }}">Panel Chairs</a></li>
+              <li><a {% if link=="tutorial_chairs" %}class="dropdown-item active" {% else %} class="dropdown-item" {% endif %} href="{{ url_for('tutorial_chairs') }}">Tutorial Chairs</a></li>
+              <li><a {% if link=="local_chairs" %}class="dropdown-item active" {% else %} class="dropdown-item" {% endif %} href="{{ url_for('local_chairs') }}">Local Chairs</a></li>
+              <li><a {% if link=="award_chairs" %}class="dropdown-item active" {% else %} class="dropdown-item" {% endif %} href="{{ url_for('award_chairs') }}">Award Chairs</a></li>
+              <li><a {% if link=="phd_track_chairs" %}class="dropdown-item active" {% else %} class="dropdown-item" {% endif %} href="{{ url_for('phd_track_chairs') }}">PhD Track Chairs</a></li>
+              <li><a {% if link=="web_chairs" %}class="dropdown-item active" {% else %} class="dropdown-item" {% endif %} href="{{ url_for('web_chairs') }}">Web Chairs</a></li>
+              <li><a {% if link=="program_committee_chairs" %}class="dropdown-item active" {% else %} class="dropdown-item" {% endif %} href="{{ url_for('program_committee_chairs') }}">program Committee members</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">AUTHORS</a>
+            <a {% if link=="workshops" %}class="nav-link active" {% else %} class="nav-link" {% endif %} href="{{ url_for('workshops') }}" tabindex="-1" aria-disabled="true">WORKSHOPS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">PROGRAM</a>
+            <a {% if link=="" %}class="nav-link active" {% else %} class="nav-link" {% endif %} href="" tabindex="-1" aria-disabled="true">AUTHORS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="/registration" tabindex="-1" aria-disabled="true">REGISTRATION</a>
+            <a {% if link=="" %}class="nav-link active" {% else %} class="nav-link" {% endif %} href="" tabindex="-1" aria-disabled="true">PROGRAM</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="/hotels" tabindex="-1" aria-disabled="true">HOTEL/TRAVEL</a>
+            <a {% if link=="registration" %}class="nav-link active" {% else %} class="nav-link" {% endif %} href="{{ url_for('registration') }}" tabindex="-1" aria-disabled="true">REGISTRATION</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="/sponsors" tabindex="-1" aria-disabled="true">SPONSORS</a>
+            <a {% if link=="hotels" %}class="nav-link active" {% else %} class="nav-link" {% endif %} href="{{ url_for('hotels') }}" tabindex="-1" aria-disabled="true">HOTEL/TRAVEL</a>
+          </li>
+          <li class="nav-item">
+            <a {% if link=="sponsors" %}class="nav-link active" {% else %} class="nav-link" {% endif %} href="{{ url_for('sponsors') }}" tabindex="-1" aria-disabled="true">SPONSORS</a>
           </li>
         </ul>
         <form class="d-flex">
@@ -69,12 +70,15 @@
     </div>
   </nav>
 </div>
+
+{% if not no_banner %}
 <div class="container p-0">
   <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="static/img/original_theme.jpg" class="d-block w-100" alt="...">
+          <img src="static/img/original_theme.png" class="d-block w-100" alt="...">
         </div>
       </div>
     </div>
 </div>
+{% endif %}
